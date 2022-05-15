@@ -1,6 +1,7 @@
-package com.bivizul.sporttrainerapp.data.di
+package com.bivizul.sporttrainerapp.data.network.di
 
 import com.bivizul.sporttrainerapp.data.network.ApiService
+import com.bivizul.sporttrainerapp.data.network.NullOnEmptyConverterFactory
 import com.bivizul.sporttrainerapp.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -22,6 +23,7 @@ object AppModule {
     fun provideRetrofit(baseUrl: String): ApiService =
         Retrofit.Builder()
             .baseUrl(baseUrl)
+            .addConverterFactory(NullOnEmptyConverterFactory())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)

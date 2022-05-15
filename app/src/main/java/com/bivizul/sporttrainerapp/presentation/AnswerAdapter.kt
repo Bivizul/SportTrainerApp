@@ -25,6 +25,7 @@ class AnswerAdapter() : ListAdapter<Answer, AnswerHolder>(AnswerDiffCallback()) 
         val item = getItem(position)
         with(holder.binding) {
             with(item) {
+                tvQuestion.text = ask
                 if (response != "") {
                     tvAnswer.text = response
                 } else {

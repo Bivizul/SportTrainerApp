@@ -1,10 +1,10 @@
-package com.bivizul.sporttrainerapp.data.dao
+package com.bivizul.sporttrainerapp.data.local.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.bivizul.sporttrainerapp.data.dbmodels.AnswerDbModel
+import com.bivizul.sporttrainerapp.data.network.dbmodels.AnswerDbModel
 import com.bivizul.sporttrainerapp.domain.answer.Answer
 
 @Dao

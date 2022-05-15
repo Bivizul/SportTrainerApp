@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -27,6 +28,7 @@ class MainFragment : Fragment() {
         get() = _binding ?: throw RuntimeException("FragmentMainBinding is null")
 
     private lateinit var viewModel: UserViewModel
+    private var currentProgress = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,16 +42,20 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val dataToday = SimpleDateFormat("dd.MM.yyyy").format(Date())
+        val progressBar = binding.progressBar
+        progressBar.max = 25000
 
         viewModel = ViewModelProvider(this)[UserViewModel::class.java]
         viewModel.getUserInfo()
         viewModel.user.observe(viewLifecycleOwner) {
-            Log.d(TAG, "userMain: $it")
+//            Log.d(TAG, "userMain: $it")
             if(dataToday != it.date){
                 it.progress = 0
             }
             viewModel.setPersonalData(it)
             binding.tvNumberProgress.text = it.progress.toString()
+            currentProgress = it.progress
+            progressBar.progress = currentProgress
         }
 
         binding.btWorkout.setOnClickListener {

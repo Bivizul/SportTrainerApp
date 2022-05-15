@@ -24,6 +24,7 @@ class AnalyticsFragment : Fragment() {
         get() = _binding ?: throw RuntimeException("FragmentAnalyticsBinding is null")
 
     private lateinit var viewModel: UserViewModel
+    private var currentProgress = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,12 +37,15 @@ class AnalyticsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val progressBar = binding.progressBar2
+        progressBar.max = 25000
+
         viewModel = ViewModelProvider(this)[UserViewModel::class.java]
         viewModel.getUserInfo()
 
         viewModel.user.observe(viewLifecycleOwner) {
             binding.tvNumberProgress.text = it.progress.toString()
-            Log.d(TAG, "userAnalytics1: $it")
+//            Log.d(TAG, "userAnalytics1: $it")
             when{
                 it.progress in 25000..50000 -> binding.tvX.text = getString(R.string.one_x)
                 it.progress in 50000..75000 -> binding.tvX.text = getString(R.string.two_x)
@@ -50,6 +54,8 @@ class AnalyticsFragment : Fragment() {
                 it.progress >= 125000 -> binding.tvX.text = getString(R.string.five_x)
                 else -> binding.tvX.text = getString(R.string.zero_x)
             }
+            currentProgress = it.progress
+            progressBar.progress = currentProgress
         }
 
         with(binding){
@@ -79,7 +85,7 @@ class AnalyticsFragment : Fragment() {
                     it.progress = viewModel.calculation(it.distance, it.squats, it.weight)
                     it.date = SimpleDateFormat("dd.MM.yyyy").format(Date())
                     viewModel.setPersonalData(it)
-                    Log.d(TAG, "userAnalytics2: $it")
+//                    Log.d(TAG, "userAnalytics2: $it")
                 }
             }
         }

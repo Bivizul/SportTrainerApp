@@ -32,9 +32,9 @@ class QuestionViewModel @Inject constructor(
     val answer: LiveData<Answer>
         get() = _answer
 
-    private val _question = MutableLiveData<Question>()
-    val question: LiveData<Question>
-        get() = _question
+//    private val _question = MutableLiveData<Question>()
+//    val question: LiveData<Question>
+//        get() = _question
 
     private val _answerList = MutableLiveData<List<Answer>>()
     val answerList: LiveData<List<Answer>>
@@ -42,16 +42,21 @@ class QuestionViewModel @Inject constructor(
 
     private val listAnswer = mutableListOf<Answer?>()
 
+    private val answerSUM = Answer()
+
     fun getAnswer() {
         viewModelScope.launch {
             apiRepository.getAnswer().let {
                 if (it.isSuccessful) {
-                    listAnswer.add(it.body())
+                    answerSUM.response = it.body()!!.response
+                    Log.d(TAG, "answerSUMget: $answerSUM")
+                    listAnswer.add(answerSUM)
                     _answerList.postValue(listAnswer as List<Answer>)
-                    Log.d(TAG, "_answerList: $_answerList")
-                    setAnswerUseCase.setAnswer(it.body()!!)
+                    Log.d(TAG, "_answerList1: ${_answerList.value}")
+                    setAnswerUseCase.setAnswer(answerSUM)
+                    Log.d(TAG, "_answerList2: ${_answerList.value}")
                 } else {
-                    Log.d(TAG, "Failed to load WorkoutInfo: ${it.errorBody()}")
+                    Log.d(TAG, "Failed to load getAnswer: ${it.errorBody()}")
                 }
             }
         }
@@ -61,20 +66,25 @@ class QuestionViewModel @Inject constructor(
         viewModelScope.launch {
             apiRepository.postQuestion(question).let {
                 if (it.isSuccessful) {
-                    _answer.postValue(it.body())
+//                    _answer.postValue(it.body())
+                    Log.d(TAG, "question: $question")
+                    Log.d(TAG, "postQuestion: $it")
+                    answerSUM.ask = question.ask
+                    answerSUM.id = question.id
+                    Log.d(TAG, "answerSUMpost: $answerSUM")
                 } else {
-                    Log.d(TAG, "Failed to load WorkoutInfo: ${it.errorBody()}")
+                    Log.d(TAG, "Failed to load postQuestion: ${it.errorBody()}")
                 }
             }
         }
     }
 
-    fun setAnswerRoom(answer: Answer) {
-        viewModelScope.launch {
-            setAnswerUseCase.setAnswer(answer)
-            _answer.postValue(answer)
-        }
-    }
+//    fun setAnswerRoom(answer: Answer) {
+//        viewModelScope.launch {
+//            setAnswerUseCase.setAnswer(answer)
+//            _answer.postValue(answer)
+//        }
+//    }
 
     fun getAnswerRoom() {
         viewModelScope.launch {
@@ -87,4 +97,5 @@ class QuestionViewModel @Inject constructor(
             deleteAnswerUseCase.deleteAnswer(answerResponse)
         }
     }
+
 }

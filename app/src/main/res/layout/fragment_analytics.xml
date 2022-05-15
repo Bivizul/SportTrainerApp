@@ -172,10 +172,11 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:background="@drawable/progress_bar"
+        android:progressDrawable="@drawable/progress_bar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:progress="50" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

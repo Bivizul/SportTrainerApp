@@ -1,7 +1,7 @@
 package com.bivizul.sporttrainerapp.data.repository
 
 import android.app.Application
-import com.bivizul.sporttrainerapp.data.database.AnswerDatabase
+import com.bivizul.sporttrainerapp.data.local.database.AnswerDatabase
 import com.bivizul.sporttrainerapp.data.mapper.AnswerMapper
 import com.bivizul.sporttrainerapp.domain.answer.Answer
 import com.bivizul.sporttrainerapp.domain.answer.AnswerRepository
