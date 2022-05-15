@@ -25,7 +25,7 @@
             style="@style/TextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="WIN"
+            android:text="@string/win"
             android:textColor="@color/white" />
 
         <TextView
@@ -33,7 +33,7 @@
             style="@style/TextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SPORT"
+            android:text="@string/sport"
             android:textColor="@color/orange" />
     </LinearLayout>
 
@@ -43,7 +43,7 @@
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="ТРЕНИРОВКА"
+        android:text="@string/workout"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -54,7 +54,7 @@
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="АНАЛИТИКА"
+        android:text="@string/analytics"
         app:layout_constraintEnd_toEndOf="@+id/btWorkout"
         app:layout_constraintStart_toStartOf="@+id/btWorkout"
         app:layout_constraintTop_toBottomOf="@+id/btWorkout" />
@@ -65,7 +65,7 @@
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="ВОПРОС ТРЕНЕРУ"
+        android:text="@string/question_trainer"
         app:layout_constraintEnd_toEndOf="@+id/btAnalytics"
         app:layout_constraintStart_toStartOf="@+id/btAnalytics"
         app:layout_constraintTop_toBottomOf="@+id/btAnalytics" />
@@ -76,7 +76,7 @@
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="НАСТРОЙКИ"
+        android:text="@string/settings"
         app:layout_constraintEnd_toEndOf="@+id/btQuestion"
         app:layout_constraintStart_toStartOf="@+id/btQuestion"
         app:layout_constraintTop_toBottomOf="@+id/btQuestion" />
@@ -87,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="ЦЕЛЬ НА ДЕНЬ:"
+        android:text="@string/goal_for_the_day"
         app:layout_constraintEnd_toEndOf="@+id/btSettings"
         app:layout_constraintStart_toStartOf="@+id/btSettings"
         app:layout_constraintTop_toBottomOf="@+id/btSettings" />
@@ -104,10 +104,10 @@
         <TextView
             android:id="@+id/tvNumberPurpose"
             style="@style/TextStyle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="25000"
+            android:text="@string/_25000"
             android:textColor="@color/orange" />
 
         <TextView
@@ -115,7 +115,7 @@
             style="@style/TextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="POINTS" />
+            android:text="@string/points" />
     </LinearLayout>
 
     <LinearLayout
@@ -132,15 +132,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ПРОГРЕСС: " />
+            android:text="@string/progress" />
 
         <TextView
             android:id="@+id/tvNumberProgress"
             style="@style/TextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15000"
-            android:textColor="@color/orange" />
+            android:textColor="@color/orange"
+            tools:text="15000" />
 
         <TextView
             android:id="@+id/tvP"
@@ -148,7 +148,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="P" />
+            android:text="@string/p" />
     </LinearLayout>
 
     <ProgressBar

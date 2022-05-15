@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="WIN" />
+            android:text="@string/win" />
 
         <TextView
             android:id="@+id/tvTittle2"
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="SPORT"
+            android:text="@string/sport"
             android:textColor="@color/orange" />
     </LinearLayout>
 
@@ -73,17 +73,17 @@
 
         <EditText
             android:id="@+id/etQuestion"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="ВАШ ВОПРОС"
-            android:inputType="textMultiLine|text"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:imeOptions="flagNoExtractUi"
-            android:textColor="@color/orange"
             android:ems="10"
-            app:counterEnabled = "true"
-            app:counterMaxLength = "20"
-            android:textColorHint="@color/orange" />
+            android:hint="@string/your_question"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textMultiLine|text"
+            android:textColor="@color/orange"
+            android:textColorHint="@color/orange"
+            app:counterEnabled="true"
+            app:counterMaxLength="20" />
 
         <Button
             android:id="@+id/btPlay"
@@ -102,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="ИСТОРИЯ ОТВЕТОВ"
+        android:text="@string/history_answers"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
         app:layout_constraintStart_toStartOf="@+id/linearLayout5"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
@@ -113,11 +113,11 @@
         android:layout_height="385dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:visibility="gone"
         android:background="@color/transparentGrey"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="16dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -133,7 +133,7 @@
             android:id="@+id/tvAns"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ОТВЕТ:" />
+            android:text="@string/answer" />
 
         <TextView
             android:id="@+id/tvAnswer"

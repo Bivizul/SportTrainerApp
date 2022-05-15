@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="WIN" />
+            android:text="@string/win" />
 
         <TextView
             android:id="@+id/tvTittle2"
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="SPORT"
+            android:text="@string/sport"
             android:textColor="@color/orange" />
     </LinearLayout>
 
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="УВЕДОМЛЕНИЕ"
+        android:text="@string/notification"
         android:textColor="@color/orange"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSettings" />
@@ -62,12 +62,12 @@
         android:id="@+id/btClearData"
         style="@style/TextStyle"
         android:layout_width="170dp"
-        android:padding="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:layout_marginTop="32dp"
         android:background="@android:color/transparent"
-        android:text="ОЧИСТИТЬ ДАННЫЕ"
+        android:gravity="center_horizontal"
+        android:padding="0dp"
+        android:text="@string/clear_data"
         android:textColor="@color/orange"
         app:layout_constraintStart_toStartOf="@+id/tvNotification"
         app:layout_constraintTop_toBottomOf="@+id/tvNotification" />

@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="WIN" />
+            android:text="@string/win" />
 
         <TextView
             android:id="@+id/tvTittle2"
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="SPORT"
+            android:text="@string/sport"
             android:textColor="@color/orange" />
     </LinearLayout>
 
@@ -82,20 +82,21 @@
 
                 <ImageView
                     android:id="@+id/img1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:contentDescription="@string/image"
                     tools:src="@tools:sample/avatars" />
 
             </LinearLayout>
 
             <TextView
                 android:id="@+id/tvDescription"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
-                android:text="TextView" />
+                tools:text="Description" />
         </LinearLayout>
     </ScrollView>
 

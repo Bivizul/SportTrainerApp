@@ -1,4 +1,4 @@
-package com.bivizul.sporttrainerapp.data.local.dao
+package com.bivizul.sporttrainerapp.data.room.dao
 
 import androidx.room.Dao
 import androidx.room.Insert

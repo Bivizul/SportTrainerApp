@@ -1,17 +1,15 @@
 package com.bivizul.sporttrainerapp.presentation.screens
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doOnTextChanged
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.bivizul.sporttrainerapp.R
 import com.bivizul.sporttrainerapp.databinding.FragmentAnalyticsBinding
 import com.bivizul.sporttrainerapp.presentation.viewmodels.UserViewModel
-import com.bivizul.sporttrainerapp.utils.Constants.TAG
 import dagger.hilt.android.AndroidEntryPoint
 import java.text.SimpleDateFormat
 import java.util.*
@@ -46,10 +44,10 @@ class AnalyticsFragment : Fragment() {
         viewModel.user.observe(viewLifecycleOwner) {
             binding.tvNumberProgress.text = it.progress.toString()
 //            Log.d(TAG, "userAnalytics1: $it")
-            when{
+            when {
                 it.progress in 25000..50000 -> binding.tvX.text = getString(R.string.one_x)
                 it.progress in 50000..75000 -> binding.tvX.text = getString(R.string.two_x)
-                it.progress in 75000..100000-> binding.tvX.text = getString(R.string.three_x)
+                it.progress in 75000..100000 -> binding.tvX.text = getString(R.string.three_x)
                 it.progress in 100000..125000 -> binding.tvX.text = getString(R.string.four_x)
                 it.progress >= 125000 -> binding.tvX.text = getString(R.string.five_x)
                 else -> binding.tvX.text = getString(R.string.zero_x)
@@ -58,7 +56,7 @@ class AnalyticsFragment : Fragment() {
             progressBar.progress = currentProgress
         }
 
-        with(binding){
+        with(binding) {
             etDistance.doOnTextChanged { text, start, before, count ->
                 if (text!!.isEmpty()) {
                     etDistance.error = getString(R.string.wrong_distance)

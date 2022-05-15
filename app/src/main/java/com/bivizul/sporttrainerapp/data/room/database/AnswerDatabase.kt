@@ -1,10 +1,10 @@
-package com.bivizul.sporttrainerapp.data.local.database
+package com.bivizul.sporttrainerapp.data.room.database
 
 import android.app.Application
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.bivizul.sporttrainerapp.data.local.dao.AnswerDao
+import com.bivizul.sporttrainerapp.data.room.dao.AnswerDao
 import com.bivizul.sporttrainerapp.data.network.dbmodels.AnswerDbModel
 
 @Database(entities = [AnswerDbModel::class], version = 1, exportSchema = false)

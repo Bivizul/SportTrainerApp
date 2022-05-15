@@ -5,12 +5,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.bivizul.sporttrainerapp.data.repository.UserInfoRepositoryImpl
+import com.bivizul.sporttrainerapp.data.room.repository.UserInfoRepositoryImpl
 import com.bivizul.sporttrainerapp.domain.user.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import java.text.SimpleDateFormat
-import java.util.*
 import javax.inject.Inject
 
 @HiltViewModel

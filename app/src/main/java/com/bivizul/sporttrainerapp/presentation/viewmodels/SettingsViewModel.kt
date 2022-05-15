@@ -7,5 +7,5 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(private val repository: ApiRepository) : ViewModel() {
-    // TODO: Implement the ViewModel
+
 }

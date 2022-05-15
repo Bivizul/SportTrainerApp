@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="WIN" />
+            android:text="@string/win" />
 
         <TextView
             android:id="@+id/tvTittle2"
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="SPORT"
+            android:text="@string/sport"
             android:textColor="@color/orange" />
     </LinearLayout>
 
@@ -41,13 +41,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:gravity="center"
-        android:text="НАЧАЛО ТРЕНИРОВКИ"
+        android:text="@string/begin_workout"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
     <EditText
@@ -57,7 +56,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/my_edit_text"
         android:ems="10"
-        android:hint="ИМЯ"
+        android:hint="@string/name"
         android:inputType="textPersonName"
         android:paddingStart="20dp"
         android:textColor="@color/white"
@@ -74,7 +73,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/my_edit_text"
         android:ems="10"
-        android:hint="РОСТ"
+        android:hint="@string/height"
         android:inputType="number"
         android:paddingStart="20dp"
         android:textColor="@color/white"
@@ -91,9 +90,9 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/my_edit_text"
         android:ems="10"
-        android:hint="ВЕС"
-        android:inputType="number"
+        android:hint="@string/weight"
         android:imeOptions="actionDone"
+        android:inputType="number"
         android:paddingStart="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -107,8 +106,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="НАЧАТЬ"
         android:enabled="false"
+        android:text="@string/begin"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/etWeight"
         app:layout_constraintStart_toStartOf="@+id/etWeight"

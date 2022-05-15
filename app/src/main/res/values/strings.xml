@@ -20,6 +20,28 @@
     <string name="wrong_distance">Неверное расстояние</string>
     <string name="wrong_amount">Неверное количество</string>
     <string name="five_x">5X</string>
+    <string name="p">P</string>
+    <string name="progress_main">ПРОГРЕСС:</string>
+    <string name="points">POINTS</string>
+    <string name="_25000">25000</string>
+    <string name="goal_for_the_day">ЦЕЛЬ НА ДЕНЬ:</string>
+    <string name="settings">НАСТРОЙКИ</string>
+    <string name="question_trainer">ВОПРОС ТРЕНЕРУ</string>
+    <string name="analytics_main">АНАЛИТИКА</string>
+    <string name="workout">ТРЕНИРОВКА</string>
+    <string name="sport_main">SPORT</string>
+    <string name="begin_workout">НАЧАЛО ТРЕНИРОВКИ</string>
+    <string name="name">ИМЯ</string>
+    <string name="height">РОСТ</string>
+    <string name="weight">ВЕС</string>
+    <string name="begin">НАЧАТЬ</string>
+    <string name="your_question">ВАШ ВОПРОС</string>
+    <string name="history_answers">ИСТОРИЯ ОТВЕТОВ</string>
+    <string name="answer">ОТВЕТ:</string>
+    <string name="notification">УВЕДОМЛЕНИЕ</string>
+    <string name="clear_data">ОЧИСТИТЬ ДАННЫЕ</string>
+    <string name="image">image</string>
+    <string name="answer_item">ОТВЕТ:</string>
 
 
 </resources>

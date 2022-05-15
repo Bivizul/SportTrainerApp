@@ -1,11 +1,11 @@
-package com.bivizul.sporttrainerapp.data.local.database
+package com.bivizul.sporttrainerapp.data.room.database
 
 import android.app.Application
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.bivizul.sporttrainerapp.data.network.dbmodels.UserDbModel
-import com.bivizul.sporttrainerapp.data.local.dao.UserInfoDao
+import com.bivizul.sporttrainerapp.data.room.dao.UserInfoDao
 
 @Database(entities = [UserDbModel::class], version = 1, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {

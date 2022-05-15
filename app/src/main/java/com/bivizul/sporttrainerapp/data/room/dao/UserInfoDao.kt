@@ -1,4 +1,4 @@
-package com.bivizul.sporttrainerapp.data.local.dao
+package com.bivizul.sporttrainerapp.data.room.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

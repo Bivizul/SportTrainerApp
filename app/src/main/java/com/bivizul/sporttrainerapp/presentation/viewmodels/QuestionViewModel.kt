@@ -7,9 +7,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bivizul.sporttrainerapp.data.network.ApiRepository
-import com.bivizul.sporttrainerapp.data.repository.AnswerRepositoryImpl
+import com.bivizul.sporttrainerapp.data.room.repository.AnswerRepositoryImpl
 import com.bivizul.sporttrainerapp.domain.answer.*
-import com.bivizul.sporttrainerapp.utils.Constants
 import com.bivizul.sporttrainerapp.utils.Constants.TAG
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -31,10 +30,6 @@ class QuestionViewModel @Inject constructor(
     private val _answer = MutableLiveData<Answer>()
     val answer: LiveData<Answer>
         get() = _answer
-
-//    private val _question = MutableLiveData<Question>()
-//    val question: LiveData<Question>
-//        get() = _question
 
     private val _answerList = MutableLiveData<List<Answer>>()
     val answerList: LiveData<List<Answer>>
@@ -78,13 +73,6 @@ class QuestionViewModel @Inject constructor(
             }
         }
     }
-
-//    fun setAnswerRoom(answer: Answer) {
-//        viewModelScope.launch {
-//            setAnswerUseCase.setAnswer(answer)
-//            _answer.postValue(answer)
-//        }
-//    }
 
     fun getAnswerRoom() {
         viewModelScope.launch {
