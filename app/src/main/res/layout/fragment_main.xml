@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_main"
+    tools:background="@drawable/background_1"
+    tools:context=".presentation.screens.MainFragment">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTittle1"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WIN"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvTittle2"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SPORT"
+            android:textColor="@color/orange" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btWorkout"
+        style="@style/TextStyle"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="ТРЕНИРОВКА"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/btAnalytics"
+        style="@style/TextStyle"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="АНАЛИТИКА"
+        app:layout_constraintEnd_toEndOf="@+id/btWorkout"
+        app:layout_constraintStart_toStartOf="@+id/btWorkout"
+        app:layout_constraintTop_toBottomOf="@+id/btWorkout" />
+
+    <Button
+        android:id="@+id/btQuestion"
+        style="@style/TextStyle"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ВОПРОС ТРЕНЕРУ"
+        app:layout_constraintEnd_toEndOf="@+id/btAnalytics"
+        app:layout_constraintStart_toStartOf="@+id/btAnalytics"
+        app:layout_constraintTop_toBottomOf="@+id/btAnalytics" />
+
+    <Button
+        android:id="@+id/btSettings"
+        style="@style/TextStyle"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="НАСТРОЙКИ"
+        app:layout_constraintEnd_toEndOf="@+id/btQuestion"
+        app:layout_constraintStart_toStartOf="@+id/btQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/btQuestion" />
+
+    <TextView
+        android:id="@+id/tvPurpose"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="ЦЕЛЬ НА ДЕНЬ:"
+        app:layout_constraintEnd_toEndOf="@+id/btSettings"
+        app:layout_constraintStart_toStartOf="@+id/btSettings"
+        app:layout_constraintTop_toBottomOf="@+id/btSettings" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/tvPurpose"
+        app:layout_constraintStart_toStartOf="@+id/tvPurpose"
+        app:layout_constraintTop_toBottomOf="@+id/tvPurpose">
+
+        <TextView
+            android:id="@+id/tvNumberPurpose"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:layout_weight="1"
+            android:text="25000" />
+
+        <TextView
+            android:id="@+id/tvPoints"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POINTS" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="@+id/progressBar">
+
+        <TextView
+            android:id="@+id/tvProgress"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ПРОГРЕСС: " />
+
+        <TextView
+            android:id="@+id/tvNumberProgress"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15000"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:id="@+id/tvP"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="P" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:progress="50"
+        android:background="@drawable/progress_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

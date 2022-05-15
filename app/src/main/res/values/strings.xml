@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">SportTrainerApp</string>
+    <string name="response_processed">Ответ обрабатывается</string>
+
+    <string name="win">WIN</string>
+    <string name="sport">SPORT</string>
+    <string name="analytics">АНАЛИТИКА</string>
+    <string name="enter_data">ВНЕСИТЕ ДАННЫЕ</string>
+    <string name="distance">РАСТОЯНИЕ (КМ)</string>
+    <string name="squats">ПРИСЕДАНИЯ (РАЗ)</string>
+    <string name="strikes">УДАРЫ:</string>
+    <string name="introduce">ВНЕСТИ</string>
+    <string name="progress">ПРОГРЕСС:</string>
+
+    <string name="one_x">1X</string>
+    <string name="two_x">2X</string>
+    <string name="three_x">3X</string>
+    <string name="four_x">4X</string>
+    <string name="zero_x">0X</string>
+    <string name="wrong_distance">Неверное расстояние</string>
+    <string name="wrong_amount">Неверное количество</string>
+    <string name="five_x">5X</string>
+
+
+</resources>

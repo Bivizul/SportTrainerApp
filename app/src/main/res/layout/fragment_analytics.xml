@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_analytics"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/background_1"
+    tools:context=".presentation.screens.AnalyticsFragment">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTittle1"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/win"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvTittle2"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sport"
+            android:textColor="@color/orange" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTittle"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/analytics"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+
+    <TextView
+        android:id="@+id/tvInputData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/enter_data"
+        app:layout_constraintEnd_toEndOf="@+id/tvTittle"
+        app:layout_constraintStart_toStartOf="@+id/tvTittle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTittle" />
+
+    <EditText
+        android:id="@+id/etDistance"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/my_edit_text"
+        android:gravity="center"
+        android:hint="@string/distance"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tvInputData"
+        app:layout_constraintStart_toStartOf="@+id/tvInputData"
+        app:layout_constraintTop_toBottomOf="@+id/tvInputData" />
+
+    <EditText
+        android:id="@+id/etSquats"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/my_edit_text"
+        android:gravity="center"
+        android:hint="@string/squats"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/etDistance"
+        app:layout_constraintStart_toStartOf="@+id/etDistance"
+        app:layout_constraintTop_toBottomOf="@+id/etDistance" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutStrikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btContribute"
+        app:layout_constraintEnd_toEndOf="@+id/btContribute"
+        app:layout_constraintStart_toStartOf="@+id/btContribute">
+
+        <TextView
+            android:id="@+id/tvStrikes"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strikes"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvX"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="80sp"
+            tools:text="1X" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btContribute"
+        style="@style/ButtonOrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:enabled="false"
+        android:text="@string/introduce"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout4" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar2"
+        app:layout_constraintStart_toStartOf="@+id/progressBar2">
+
+        <TextView
+            android:id="@+id/tvProgress"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/progress" />
+
+        <TextView
+            android:id="@+id/tvNumberProgress"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            tools:text="15000" />
+
+        <TextView
+            android:id="@+id/tvP"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="P" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/progress_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

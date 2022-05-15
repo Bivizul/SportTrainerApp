@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/background_1"
+    tools:context=".presentation.screens.QuestionFragment">
+
+    <Button
+        android:id="@+id/btBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_arrow_back_ios_48"
+        android:foreground="@drawable/ic_baseline_arrow_back_ios_48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTittle1"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="WIN" />
+
+        <TextView
+            android:id="@+id/tvTittle2"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SPORT"
+            android:textColor="@color/orange" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvQuestionTrainer"
+        style="@style/TextStyle"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:text="ВОПРОС ТРЕНЕРУ" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="87dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvQuestionTrainer"
+        app:layout_constraintStart_toStartOf="@+id/tvQuestionTrainer"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestionTrainer">
+
+        <EditText
+            android:id="@+id/etQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ВАШ ВОПРОС"
+            android:inputType="textMultiLine|text"
+            android:imeOptions="flagNoExtractUi"
+            android:lines="2"
+            android:textColorHint="@color/orange" />
+
+        <Button
+            android:id="@+id/btPlay"
+            style="@style/ButtonOrange"
+            android:layout_width="63dp"
+            android:layout_height="51dp"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/orange"
+            android:foreground="@drawable/ic_baseline_play_arrow_24" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHistory"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="ИСТОРИЯ ОТВЕТОВ"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="385dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:background="@color/transparentGrey"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            tools:text="Какой должен быть пульс при ускорениях?" />
+
+        <TextView
+            android:id="@+id/tvAns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ОТВЕТ:" />
+
+        <TextView
+            android:id="@+id/tvAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="  Добрый день! Обычно кардио нагрузки не должны превышать 140-160 ударов в минуту, старайтесь держать такой темп." />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvQuestion"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/transparentGrey"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHistory"
+        tools:listitem="@layout/item_answer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
